@@ -1,0 +1,110 @@
+:root {
+  --background-color: #f9f9f9;
+  --text-color: #333;
+  --card-color: #fff;
+}
+
+body.dark {
+  --background-color: #333;
+  --text-color: #f9f9f9;
+  --card-color: #444;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; /* Adjust the size */
+  background-blend-mode: overlay; /* Blend background-color with image */
+  background-color: var(--background-color); /* Set color for light/dark mode */
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+
+.container {
+  text-align: center;
+  max-width: 600px;
+}
+
+h1 {
+  color: var(--text-color);
+}
+
+.mood{
+  color: lightblue;
+}
+
+.mood-buttons {
+  margin: 20px 0;
+}
+
+.mood-btn {
+  font-size: 16px;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.mood-btn:hover {
+  background-color: var(--card-color);
+  transform: scale(1.1);
+}
+
+#playlist-container {
+  margin-top: 20px;
+  text-align: left;
+  animation: fadeIn 0.5s ease;
+}
+
+.playlist-card {
+  background: var(--card-color);
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.playlist-card h3 {
+  margin: 0;
+  color: var(--text-color);
+}
+
+/* Fade-in animation for playlist cards */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Theme toggle button styles */
+.theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px 15px;
+  background-color: var(--card-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background-color: var(--text-color);
+  color: var(--card-color);
+}
